@@ -35,5 +35,19 @@ namespace Krypta_all
         {
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form4 frm4 = new Form4();
+            frm4.Activate();
+            frm4.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form5 frm5 = new Form5();
+            frm5.Activate();
+            frm5.Show();
+        }
     }
 }

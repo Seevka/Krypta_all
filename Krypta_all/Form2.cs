@@ -18,6 +18,7 @@ namespace Krypta_all
 {
     public partial class Form2 : Form
     {
+        Dictionary<char, float> dic = new Dictionary<char, float>();
         public Form2()
         {
             InitializeComponent();
@@ -66,7 +67,6 @@ namespace Krypta_all
                     str1 += str[i];
                 }
             }
-            Dictionary<char, int> dic = new Dictionary<char, int>();
             foreach (char ch in str1)
             {
                 if (dic.ContainsKey(ch))
@@ -74,7 +74,9 @@ namespace Krypta_all
                 else
                     dic.Add(ch, 1);
             }
-            foreach (KeyValuePair<char, int> item in dic)
+            dataGridView1.Columns.Add("Letter", "Letter");
+            dataGridView1.Columns.Add("Count", "Count");
+            foreach (KeyValuePair<char, float> item in dic)
             {
                 dataGridView1.Rows.Add(item.Key, item.Value);
             }
@@ -94,7 +96,6 @@ namespace Krypta_all
                     str1 += str[i];
                 }
             }
-            Dictionary<char, float> dic = new Dictionary<char, float>();
             var counted = str1.GroupBy(c => c).Select(g => new { g.Key, Count = g.Count() }).OrderByDescending(o => o.Count);
             int leng = str1.Length;
             foreach (char ch in str1)
@@ -104,6 +105,8 @@ namespace Krypta_all
                 else
                     dic.Add(ch, 1);
             }
+            dataGridView1.Columns.Add("Letter", "Letter");
+            dataGridView1.Columns.Add("Count", "Count");
             foreach (KeyValuePair<char, float> kvp in dic.OrderBy(key => key.Key))
             {
                 float r = (kvp.Value / leng) * 100;
@@ -111,6 +114,7 @@ namespace Krypta_all
                 dataGridView1.Rows.Add(kvp.Key, r1);
                 //textBox2.Text += string.Format("{0}-{1}% \t", kvp.Key, r1);
             }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -118,7 +122,22 @@ namespace Krypta_all
             SaveFileDialog sfd = new SaveFileDialog();
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(sfd.FileName, dataGridView1.Text);
+                using (TextWriter tw = new StreamWriter(sfd.FileName))
+                {
+                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    {
+                        for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                        {
+                            tw.Write($"{dataGridView1.Rows[i].Cells[j].Value.ToString()}");
+
+                            if (j != dataGridView1.Columns.Count - 1)
+                            {
+                                tw.Write("-");
+                            }
+                        }
+                        tw.WriteLine();
+                    }
+                }
             }
             MessageBox.Show(
         "       Успішно збережено!",
@@ -142,17 +161,32 @@ namespace Krypta_all
                 SaveFileDialog sfd = new SaveFileDialog();
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    File.WriteAllText(sfd.FileName, dataGridView1.Text);
+                    using (TextWriter tw = new StreamWriter(sfd.FileName))
+                    {
+                        for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                        {
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                            {
+                                tw.Write($"{dataGridView1.Rows[i].Cells[j].Value.ToString()}");
+
+                                if (j != dataGridView1.Columns.Count - 1)
+                                {
+                                    tw.Write(",");
+                                }
+                            }
+                            tw.WriteLine();
+                        }
+                    }
                 }
                 MessageBox.Show(
             "       Успішно збережено!",
             ""
             );
-                this.Hide();
+                this.Close();
             }
             if (result == DialogResult.No)
             {
-                this.Hide();
+                this.Close();
             }
         }
 
