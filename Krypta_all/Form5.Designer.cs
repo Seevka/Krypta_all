@@ -65,6 +65,7 @@ namespace Krypta_all
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(-1, 475);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";

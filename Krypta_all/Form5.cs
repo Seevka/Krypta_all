@@ -58,7 +58,6 @@ namespace Krypta_all
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
             textBox2.Text = "";
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
