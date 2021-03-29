@@ -49,5 +49,12 @@ namespace Krypta_all
             frm5.Activate();
             frm5.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form6 frm6 = new Form6();
+            frm6.Activate();
+            frm6.Show();
+        }
     }
 }

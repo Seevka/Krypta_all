@@ -246,22 +246,19 @@ namespace Krypta_all
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            string t;
-            t = listBox1.Items.ToString();
-            
+
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    Stream file_stream = sfd.OpenFile();
-                    StreamWriter sw = new StreamWriter(file_stream);
 
-                    for (int i = 0; i < 51; i++)
+                    using (System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(sfd.FileName))
                     {
-                        sw.WriteLine(t);
+                        foreach (var item in listBox1.Items)
+                            SaveFile.WriteLine(item.ToString());
                     }
 
-                    
+
                 }
                 MessageBox.Show(
             "       Успішно збережено!",
