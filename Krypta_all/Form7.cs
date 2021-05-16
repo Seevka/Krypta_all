@@ -126,7 +126,16 @@ namespace Krypta_all
             string encrypted = textBox1.Text;
             string key = userAnswer;
             string ww = encryptDecrypt(encrypted, key);
-            textBox2.Text = ww;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
