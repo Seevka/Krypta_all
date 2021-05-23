@@ -41,6 +41,8 @@ namespace Krypta_all
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -68,7 +70,7 @@ namespace Krypta_all
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(191, 568);
+            this.button3.Location = new System.Drawing.Point(191, 581);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 51);
             this.button3.TabIndex = 2;
@@ -164,6 +166,28 @@ namespace Krypta_all
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // button12
+            // 
+            this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button12.Location = new System.Drawing.Point(368, 509);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(115, 51);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Підпис";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button13.Location = new System.Drawing.Point(191, 509);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(115, 51);
+            this.button13.TabIndex = 12;
+            this.button13.Text = "Секрет";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +195,8 @@ namespace Krypta_all
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(495, 631);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -201,6 +227,8 @@ namespace Krypta_all
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 

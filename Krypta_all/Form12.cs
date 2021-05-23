@@ -95,7 +95,7 @@ namespace Krypta_all
         }
         private long Calculate_e(long d, long m)
         {
-            long e = 10;
+            long e = 2;
 
             while (true)
             {
@@ -107,6 +107,7 @@ namespace Krypta_all
 
             return e;
         }
+
 
         private void Form12_Load(object sender, EventArgs e)
         {

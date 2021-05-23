@@ -150,7 +150,7 @@ namespace Krypta_all
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form9";
-            this.Text = "Соловея-Штрасена by SevkaLab";
+            this.Text = "т";
             this.Load += new System.EventHandler(this.Form9_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

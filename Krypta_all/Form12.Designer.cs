@@ -72,7 +72,7 @@ namespace Krypta_all
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 57);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Зашифрувати";
+            this.button1.Text = "Encrypt";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -82,7 +82,7 @@ namespace Krypta_all
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 57);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Розшифрувати";
+            this.button2.Text = "Decrypt";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -92,7 +92,7 @@ namespace Krypta_all
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 57);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Відкрити з файлу";
+            this.button3.Text = "Open with file";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -102,7 +102,7 @@ namespace Krypta_all
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 57);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Зберегти";
+            this.button4.Text = "Save";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
